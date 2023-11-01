@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <p class="counterValue">0</p>
+    <button class="increase">Increase</button>
+    <button class="decrease">Decrease</button>\
+    <script>
+      let counterval = document.querySelector(".counterValue");
+
+      let counter = 0;
+
+      document.querySelector(".increase").addEventListener("click", () => {
+        if (counter === 10) {
+          counter = 0;
+        } else {
+          counter++;
+        }
+        counterval.innerText = counter;
+      });
+
+      document.querySelector(".decrease").addEventListener("click", () => {
+        if (counter === 0) {
+          // Do nothing if counter is already 0
+        } else {
+          counter--;
+        }
+        counterval.innerText = counter;
+      });
+    </script>
+  </body>
+</html>
